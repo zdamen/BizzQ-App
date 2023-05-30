@@ -27,12 +27,6 @@ const FeedbackForm = () => {
             alert('An error occurred while submitting feedback.');
         }
     };
-
-    const fetchFeedback = async () => {
-        const res = await fetch('/api/getFeedback');
-        const data = await res.json();
-        setDisplayFeedback(data.feedback);
-    };
     
     const handleClick = async () => {
         const res = await fetch('/api/getFeedback');
